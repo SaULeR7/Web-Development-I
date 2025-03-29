@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Question 17</title>
+<form>    
+<p>x = <input type="text" id="number" maxlength="3"></p>
+<button type="button" onclick="math()"/>Check</button>
+<p id="answer1"></p>
+<p id="answer2"></p>
+</form>
+</body>   
+</html>
+<script>
+function math()  
+{  
+    var number = document.getElementById("number").value;   
+    answer1.innerHTML=("x^2= "+ Math.pow(number,2));
+	answer2.innerHTML=("x^3= "+ Math.pow(number,3));
+}
+</script>

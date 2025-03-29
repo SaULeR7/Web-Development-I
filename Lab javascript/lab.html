@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Javascript</title>
+<style>
+body {
+  background-image: url('img.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#a{
+border: 15px solid purple;
+width: 50%;
+height: 50%;
+text-align: center;
+}
+form { 
+background: grey;
+margin: 0 auto; 
+width:250px;
+}
+p{
+font-size:20px;
+text-decoration: underline;
+}
+input{
+background: green;
+}
+.button{
+background-color: green;
+padding: 20px;
+border-radius: 50%;
+}
+</style>
+</head>
+<body >
+<form id="a">
+  <h2>Payroll Report</h2>
+  <label><u>Insert hourly rate:</u></label>
+  <input id="rate" type="text" maxlength="5"><br><br>
+  <label><u>How many hours:</u></label>
+  <input id="hours" type="text" maxlength="5"><br><br>
+  <button class="button" type="button" onclick="changeContent()">Calculate</button>
+
+  <p id ="tp"></p>
+  <p id ="gp"></p>
+  <p id ="d"></p>
+</form>
+</body>   
+</html>
+<script>
+function changeContent(){
+    var total, d;
+	var x = document.getElementById("rate").value;
+	var y = document.getElementById("hours").value;
+	
+	if(y > 60 || y < 20)
+	{
+		alert("Hours must be between 20 and 60");
+	}
+	else
+	{
+		if (y > 40)
+		{
+			var e = (y-40)*0.05;
+			total = x * y + e;
+		}
+		else 
+		{
+			total = x * y;
+		}
+		if(x < 25)
+		{
+			d = total * 0.05;
+		}
+		else
+		{
+			d = total * 0.07;
+		}
+		document.getElementById("gp").innerHTML = 'Gross Pay: ........ ' + total + '$';
+		document.getElementById("d").innerHTML = 'Deductions: ........ ' + d + '$';
+		document.getElementById("tp").innerHTML = 'Total Pay: ........ ' + (total - d) + '$';
+	}
+}
+</script>

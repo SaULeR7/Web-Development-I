@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Registration form</title>
+<style>
+form {
+	border: #dbdbdb solid 5px;
+	background: grey;
+
+}
+label {
+        display: inline-block;
+        width: 100px;
+		text-align:left;
+}
+	
+</style>
+</head>
+
+<body>
+<form>
+<label for="uname"><b>Username:</b></label>
+    <input type="text" placeholder="Username" name="uname"><br><br>
+
+    <label for="psw"><b>Password:</b></label>
+    <input type="password" placeholder="Password" name="psw"><br><br>
+	
+	<label for="email"><b>Email:</b></label>
+    <input type="email" placeholder="Email" name="email"><br><br>
+	
+	<label for="dob"><b>Date of birth:</b></label>
+	  <select name="dob" id="dob">
+		<option>Jan</option>
+		<option>Feb</option>
+		<option>Mar</option>
+		<option>Apr</option>
+		<option>May</option>
+		<option>June</option>
+		<option>July</option>
+		<option>Aug</option>
+		<option>Sep</option>
+		<option>Oct</option>
+		<option>Nov</option>
+		<option>Dec</option>
+	  </select>
+	<input type="text" placeholder="Day">
+	<input type="text" placeholder="Year"><br><br>
+	
+	<label for="gender"><b>Gender:</b></label>
+	<input type="checkbox" id="male" name="male">
+    <label for="male"> Male</label>
+    <input type="checkbox" id="female" name="female">
+    <label for="female"> Female</label><br><br>
+	
+	<label for="bd"><b>Brief description:</b></label>
+	<textarea id="bd" name="bd" rows="2" cols="20"></textarea><br><br>
+	
+	<button type="reset">Clear form</button>
+	<button type="submit">Sign up</button>
+</form>
+</body>
+
+</html>

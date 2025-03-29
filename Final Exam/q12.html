@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+Number 1: <textarea id="firstNumber"></textarea><br>
+Number 2: <textarea id="secondNumber"></textarea><br>
+Operator: <textarea id="operator"></textarea><br><br>
+<button onClick="math()">Do math</button>
+<br>
+<p id="result"></p>
+
+<script>
+	function math(){
+		num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+		oprt = document.getElementById("operator").value;
+		document.getElementById("result").innerHTML = "Result is: " + num1 * num2;
+		let r;
+		switch(oprt) {
+			case '+':
+				r = parseInt(num1) + parseInt(num2);
+				document.getElementById("result").innerHTML = "Result is: " + r;
+			break;
+			case '-':
+				r = parseInt(num1) - parseInt(num2);
+				document.getElementById("result").innerHTML = "Result is: " + r;
+			break;
+			case '/':
+				r = parseFloat(num1) / parseFloat(num2);
+				document.getElementById("result").innerHTML = "Result is: " + r;
+			break;
+			case '*':
+				r = parseInt(num1) * parseInt(num2);
+				document.getElementById("result").innerHTML = "Result is: " + r;
+			break;
+			default:
+				document.getElementById("result").innerHTML = "Something went wrong. =("
+		}
+		
+	}
+</script>
+</body>
+
+</html>

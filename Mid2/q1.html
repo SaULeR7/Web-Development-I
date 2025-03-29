@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Question 1</title>
+<form>    
+<p>Zip Code: <input type="text" id="zip" maxlength="5"></p>
+<button type="button" onclick="validation()"/>Check</button>
+</form>
+</body>   
+</html>
+<script>
+function validation()  
+{  
+    var zip = document.getElementById("zip");  
+    var numbers = /^[0-9]+$/;  
+    
+	if(zip.value.match(numbers))  
+    {  
+		if (zip.value.length < 5)
+		{
+			alert("Has to be 5 numbers.");
+		}
+		else{
+        alert("Zipcode is valid");
+		} 
+    }
+    else
+    {  
+        alert("Numbers only please.");
+    }   
+}
+</script>
